@@ -11,6 +11,18 @@
     {
       "name": "EntryAbility_label",
       "value": "label"
+    },
+    {
+      "name": "EntryAbility_login_hite",
+      "value": "请输入账号"
+    },
+    {
+      "name": "EntryAbillity_login_hite_password",
+      "value": "请输入密码"
+    },
+    {
+      "name": "button_login_text",
+      "value": "登录"
     }
   ]
 }
