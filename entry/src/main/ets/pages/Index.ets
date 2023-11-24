@@ -1,5 +1,6 @@
-
-
+import router from '@ohos.router'
+import {ActionBar} from '../views/ActionBar';
+import IndexVM from '../viewmodel/IndexVM';
 @Entry
 @Component
 struct Index {
@@ -8,6 +9,7 @@ struct Index {
   private passWord:string =''
   build() {
     Column() {
+      ActionBar({title:"登录页"}).width('100%').height('10%')
       Image($r('app.media.icon'))
         .width(100)
         .height(100)
@@ -39,6 +41,7 @@ struct Index {
         .width('100%')
         .padding(10)
         .onClick(()=>{
+          IndexVM.jump2Main(this.input,this.passWord)
           console.log(this.input+    this.passWord)
         })
       Row(){
@@ -52,11 +55,15 @@ struct Index {
 
     }
     .width('100%')
+  }
+  aboutToAppear(){
 
   }
+  onPageShow(){
 
-
+  }
 }
+
 @Extend(TextInput)
 function textInputStyle(){
   .placeholderColor($r('app.color.placeholder_color'))
@@ -80,3 +87,4 @@ function lineStyle() {
   .height('100%')
   .backgroundColor($r('app.color.line_color'))
 }
+
