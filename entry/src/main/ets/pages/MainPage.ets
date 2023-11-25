@@ -10,8 +10,17 @@ struct MainPage {
   @Builder TabBuilder(index: Number, content: string) {
     Row() {
       Column() {
-        Image(this.index === index ? $r('app.media.icon') : $r('app.media.app_icon')).width('25').height('25')
-        Text(content).fontSize(16).fontColor(this.index === index ? Color.Blue : Color.Black).margin({ top: 5 })
+        if (index==0){
+          Image($r('app.media.icon_society')).width('25').height('25')
+        }else if (index==1){
+          Image($r('app.media.icon_news')).width('25').height('25')
+        }else if (index==2){
+          Image($r('app.media.icon_tool')).width('25').height('25')
+        }else{
+          Image($r('app.media.icon_mine')).width('25').height('25')
+        }
+
+        Text(content).fontSize(12).fontColor(this.index === index ? Color.Blue : Color.Black).margin({ top: 5 })
       }.justifyContent(FlexAlign.Center).width('100%').height('75%').alignItems(HorizontalAlign.Center)
     }.width('100%').alignItems(VerticalAlign.Center)
   }

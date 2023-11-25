@@ -25,13 +25,19 @@ export struct UtilsPage {
   build() {
     Column() {
         Swiper() {
-          Image($r('app.media.app_icon')).onClick((event)=>{
+          Image($r('app.media.banner1_')).onClick((event)=>{
 
           })
-          Text('1').width('100%').height('100%').textAlign(TextAlign.Center)
-          Image($r('app.media.icon')).width('100%').height('100%')
-          Text('2').width('100%').height('100%')
-            .textAlign(TextAlign.Center)
+          Image($r('app.media.banner2')).onClick((event)=>{
+
+          })
+          Image($r('app.media.banner3')).onClick((event)=>{
+
+          })
+          Image($r('app.media.banner4')).onClick((event)=>{
+
+          })
+
         }
         .id('swiper_main')
         .width('90%')
