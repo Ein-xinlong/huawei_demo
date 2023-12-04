@@ -1,4 +1,5 @@
 import router from '@ohos.router';
+import { SmallUtil } from '../entryability/bean/SmallUtil';
 
 class IndexVM{
   jump2Main(username:string,password:string){
@@ -12,6 +13,7 @@ class IndexVM{
       console.error(`Failed to jump to the second page.Code is ${err.code}, message is ${err.message}`)
     })
   }
+
 }
 let indexVM = new IndexVM()
 export default indexVM as IndexVM;
